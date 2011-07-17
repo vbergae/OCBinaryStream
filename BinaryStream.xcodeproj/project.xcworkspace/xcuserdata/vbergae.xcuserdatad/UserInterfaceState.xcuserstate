@@ -2836,7 +2836,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>241</integer>
+					<integer>246</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -3371,8 +3371,8 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>332629221.968858</real>
-		<string>{16350, 1830}</string>
+		<real>332630031.82028699</real>
+		<string>{15754, 1581}</string>
 		<string>{16800, 0}</string>
 		<string>-testReadUnsignedLong</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
@@ -3718,7 +3718,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>69</integer>
+					<integer>65</integer>
 				</dict>
 			</array>
 		</dict>
@@ -6313,7 +6313,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>65</integer>
+					<integer>69</integer>
 				</dict>
 			</array>
 		</dict>
@@ -6770,10 +6770,10 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332629221.96961701</real>
-		<string>{3132, 933}</string>
-		<string>{3504, 0}</string>
-		<string>-readUnsignedLong</string>
+		<real>332630031.82100701</real>
+		<string>{1733, 783}</string>
+		<string>{4107, 0}</string>
+		<string>-dealloc</string>
 		<string>InputStream.m</string>
 		<dict>
 			<key>$class</key>
@@ -7103,8 +7103,8 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332629221.969486</real>
-		<string>{51, 921}</string>
+		<real>332630031.820885</real>
+		<string>{378, 839}</string>
 		<string>{581, 0}</string>
 		<string>@interface InputStream</string>
 		<dict>
@@ -12087,8 +12087,8 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332629221.96713299</real>
-		<string>{16350, 1830}</string>
+		<real>332630031.818685</real>
+		<string>{15754, 1581}</string>
 		<string>{16800, 0}</string>
 		<dict>
 			<key>$class</key>
@@ -12513,8 +12513,8 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332629221.967224</real>
-		<string>{51, 921}</string>
+		<real>332630031.81877297</real>
+		<string>{378, 839}</string>
 		<string>{581, 0}</string>
 		<dict>
 			<key>$class</key>

@@ -210,6 +210,10 @@
 
 - (void)dealloc
 {
+    if ([self isOpen]) {
+        [self closeStream];
+    }
+    
     [_path release];
     _path = nil;
     
