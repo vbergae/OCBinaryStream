@@ -307,6 +307,211 @@
     [_inputStream closeStream];
 }
 
+- (void)testReadInt
+{
+    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test3.bin"];
+    [_inputStream openStream];
+    
+    // Tests first 16 bytes in test2.bin file 
+    // File contents (00000000 FFFFFFFF FFFF0000 0000FFFF)
+
+    int value;
+    
+    value = [_inputStream readInt];
+    STAssertTrue(value == (int)0, 
+                 @"First int should be 0 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 4, 
+                 @"offset should be 4 but is %d", [_inputStream offset]);
+    
+    value = [_inputStream readInt];
+    STAssertTrue(value == (int)-1, 
+                 @"First int should be -1 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 8, 
+                 @"offset should be 8 but is %d", [_inputStream offset]);
+    
+    value = [_inputStream readInt];
+    STAssertTrue(value == (int)-65536, 
+                 @"First int should be -65536 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 12, 
+                 @"offset should be 12 but is %d", [_inputStream offset]);    
+    
+    value = [_inputStream readInt];
+    STAssertTrue(value == (int)65535, 
+                 @"First int should be 65535 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 16, 
+                 @"offset should be 16 but is %d", [_inputStream offset]);        
+    
+    [_inputStream closeStream];
+}
+
+- (void)testReadUnsignedInt
+{
+    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test3.bin"];
+    [_inputStream openStream];
+    
+    // Tests first 16 bytes in test3.bin file 
+    // File contents (00000000 FFFFFFFF FFFF0000 0000FFFF)
+    
+    unsigned int value;
+    
+    value = [_inputStream readUnsignedInt];
+    STAssertTrue(value == (unsigned int)0, 
+                 @"First int should be 0 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 4, 
+                 @"offset should be 4 but is %d", [_inputStream offset]);
+    
+    value = [_inputStream readUnsignedInt];
+    STAssertTrue(value == (unsigned int)4294967295, 
+                 @"First int should be 4294967295 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 8, 
+                 @"offset should be 8 but is %d", [_inputStream offset]);
+    
+    value = [_inputStream readUnsignedInt];
+    STAssertTrue(value == (unsigned int)4294901760, 
+                 @"First int should be 4294901760 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 12, 
+                 @"offset should be 12 but is %d", [_inputStream offset]);    
+    
+    value = [_inputStream readUnsignedInt];
+    STAssertTrue(value == (unsigned int)65535, 
+                 @"First int should be 65535 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 16, 
+                 @"offset should be 16 but is %d", [_inputStream offset]);  
+    
+    [_inputStream closeStream];
+}
+
+- (void)testReadLong
+{
+    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test4.bin"];
+    [_inputStream openStream];    
+
+    // Tests first 16 bytes in test3.bin file 
+    // File contents:
+    //  1: 0x00000000 00000000 
+    //  2: 0xFFFFFFFF FFFFFFFF
+    //  3: 0x00000000 FFFFFFFF 
+    //  4: 0xFFFFFFFF 00000000
+    //  5: 0xFF000000 00000000 
+    //  7: 0x00000000 000000FF
+    
+    long value;
+    
+    value = [_inputStream readLong];
+    STAssertTrue(value == (long)0, 
+                 @"First int should be 0 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 8, 
+                 @"offset should be 8 but is %d", [_inputStream offset]);
+
+    value = [_inputStream readLong];
+    STAssertTrue(value == (long)-1, 
+                 @"First int should be -1 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 16, 
+                 @"offset should be 8 but is %d", [_inputStream offset]);
+
+    value = [_inputStream readLong];
+    STAssertTrue(value == (long)4294967295, 
+                 @"First int should be 4294967295 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 24, 
+                 @"offset should be 24 but is %d", [_inputStream offset]);
+
+    value = [_inputStream readLong];
+    STAssertTrue(value == (long)-4294967296, 
+                 @"First int should be -4294967296 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 32, 
+                 @"offset should be 32 but is %d", [_inputStream offset]);
+
+    value = [_inputStream readLong];
+    STAssertTrue(value == (long)-72057594037927936, 
+                 @"First int should be -72057594037927936 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 40, 
+                 @"offset should be 40 but is %d", [_inputStream offset]);
+
+    value = [_inputStream readLong];
+    STAssertTrue(value == (long)255, 
+                 @"First int should be 255 but is %d",
+                 value);
+    STAssertTrue([_inputStream offset] == 48, 
+                 @"offset should be 48 but is %d", [_inputStream offset]);
+    
+    [_inputStream closeStream];
+}
+
+- (void)testReadUnsignedLong
+{
+    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test4.bin"];
+    [_inputStream openStream];    
+    
+    // Tests first 16 bytes in test3.bin file 
+    // File contents:
+    //  1: 0x00000000 00000000 
+    //  2: 0xFFFFFFFF FFFFFFFF
+    //  3: 0x00000000 FFFFFFFF 
+    //  4: 0xFFFFFFFF 00000000
+    //  5: 0xFF000000 00000000 
+    //  7: 0x00000000 000000FF
+    
+    unsigned long value;
+    
+    value = [_inputStream readUnsignedLong];
+    STAssertTrue(value == (unsigned long)0, 
+                 @"First int should be 0 but is %lu", 
+                 value);
+    STAssertTrue([_inputStream offset] == 8, 
+                 @"offset should be 8 but is %d", [_inputStream offset]);
+    
+    value = [_inputStream readUnsignedLong];
+    unsigned long foo = 18446744073709551615;
+    STAssertTrue(value == foo, 
+                 @"First int should be 18446744073709551615 but is %lu",
+                 value);
+    STAssertTrue([_inputStream offset] == 16, 
+                 @"offset should be 8 but is %d", [_inputStream offset]);
+    
+    value = [_inputStream readUnsignedLong];
+    STAssertTrue(value == (unsigned long)4294967295, 
+                 @"First int should be 4294967295 but is %d",
+                 value);
+    STAssertTrue([_inputStream offset] == 24, 
+                 @"offset should be 24 but is %d", [_inputStream offset]);
+    
+    value = [_inputStream readUnsignedLong];
+    STAssertTrue(value == (unsigned long)18446744069414584320, 
+                 @"First int should be 18446744069414584320 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 32, 
+                 @"offset should be 32 but is %d", [_inputStream offset]);
+    
+    value = [_inputStream readUnsignedLong];
+    STAssertTrue(value == (unsigned long)18374686479671623680, 
+                 @"First int should be 18374686479671623680 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 40, 
+                 @"offset should be 40 but is %d", [_inputStream offset]);
+    
+    value = [_inputStream readUnsignedLong];
+    STAssertTrue(value == (unsigned long)255, 
+                 @"First int should be 255 but is %d",
+                 value);
+    STAssertTrue([_inputStream offset] == 48, 
+                 @"offset should be 48 but is %d", [_inputStream offset]);
+    
+    [_inputStream closeStream];
+}
+
 #pragma mark -
 #pragma mark Intance/Helper Methods
 
