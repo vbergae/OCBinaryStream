@@ -150,7 +150,7 @@
     unsigned short value;
     [self readBytesOfLen:sizeof(unsigned short) to:&value];
     
-    return value;
+    return NSSwapShort(value);
 }
 
 - (int)readInt
@@ -158,7 +158,7 @@
     int value;
     [self readBytesOfLen:sizeof(int) to:&value];
     
-    return NSSwapShort(value);
+    return NSSwapInt(value);
 }
 
 - (unsigned int)readUnsignedInt
@@ -166,7 +166,7 @@
     unsigned int value;
     [self readBytesOfLen:sizeof(unsigned int) to:&value];
     
-    return value;
+    return NSSwapInt(value);
 }
 
 - (long)readLong
@@ -174,7 +174,7 @@
     long value;
     [self readBytesOfLen:sizeof(long) to:&value];
     
-    return value;
+    return NSSwapLong(value);
 }
 
 - (unsigned long)readUnsignedLong
@@ -182,7 +182,7 @@
     unsigned long value;
     [self readBytesOfLen:sizeof(unsigned long) to:&value];
     
-    return value;
+    return NSSwapLong(value);
 }
 
 #pragma mark -
