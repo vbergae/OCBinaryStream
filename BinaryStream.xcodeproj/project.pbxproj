@@ -6,14 +6,232 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CC07990713CE378100C9081B /* InputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = CCA0352013CCE7E500C1E14C /* InputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCC6771013D204CD00875A72 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC676F513D2045F00875A72 /* Cocoa.framework */; };
+		CCC6771613D204CD00875A72 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCC6771413D204CD00875A72 /* InfoPlist.strings */; };
+		CCC6771913D204CD00875A72 /* BinaryStreamTests.h in Resources */ = {isa = PBXBuildFile; fileRef = CCC6771813D204CD00875A72 /* BinaryStreamTests.h */; };
+		CCC6771B13D204CD00875A72 /* BinaryStreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC6771A13D204CD00875A72 /* BinaryStreamTests.m */; };
+		CCED358713CF6E060086AE0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA034E613CCE76600C1E14C /* Foundation.framework */; };
+		CCED35E213CF6F110086AE0B /* InputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA0352113CCE7E500C1E14C /* InputStream.m */; };
+		CCED35FA13CF72150086AE0B /* InputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = CCA0352013CCE7E500C1E14C /* InputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCED35FD13CF73F40086AE0B /* InputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA0352113CCE7E500C1E14C /* InputStream.m */; };
+		CCED360713CF9CB30086AE0B /* BinaryStream-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = CCED360613CF9CB30086AE0B /* BinaryStream-Prefix.pch */; };
+		CCED360813CF9CCC0086AE0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA034E613CCE76600C1E14C /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CC0798DD13CE362F00C9081B /* BinaryStream.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = BinaryStream.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCA034E613CCE76600C1E14C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CCA0352013CCE7E500C1E14C /* InputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputStream.h; sourceTree = "<group>"; };
+		CCA0352113CCE7E500C1E14C /* InputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputStream.m; sourceTree = "<group>"; };
+		CCC676F513D2045F00875A72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		CCC676F813D2045F00875A72 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		CCC676F913D2045F00875A72 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CCC676FA13D2045F00875A72 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CCC6770913D204B600875A72 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		CCC6770F13D204CD00875A72 /* BinaryStreamTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BinaryStreamTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCC6771313D204CD00875A72 /* BinaryStreamTests-Info.plist */ = {isa = PBXFileReference; path = "BinaryStreamTests-Info.plist"; sourceTree = "<group>"; };
+		CCC6771513D204CD00875A72 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CCC6771713D204CD00875A72 /* BinaryStreamTests-Prefix.pch */ = {isa = PBXFileReference; path = "BinaryStreamTests-Prefix.pch"; sourceTree = "<group>"; };
+		CCC6771813D204CD00875A72 /* BinaryStreamTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryStreamTests.h; sourceTree = "<group>"; };
+		CCC6771A13D204CD00875A72 /* BinaryStreamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryStreamTests.m; sourceTree = "<group>"; };
+		CCED358613CF6E060086AE0B /* libBinaryStremMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBinaryStremMobile.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCED360613CF9CB30086AE0B /* BinaryStream-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BinaryStream-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC0798DA13CE362F00C9081B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCED360813CF9CCC0086AE0B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCC6770B13D204CD00875A72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCC6771013D204CD00875A72 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCED358313CF6E060086AE0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCED358713CF6E060086AE0B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
-		CCA034AD13CCE6D900C1E14C = {
+		CC07990313CE363C00C9081B /* Products */ = {
 			isa = PBXGroup;
 			children = (
 			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCA034AD13CCE6D900C1E14C = {
+			isa = PBXGroup;
+			children = (
+				CCED360413CF9BD30086AE0B /* InputStream */,
+				CCED358913CF6E060086AE0B /* Supporting Files */,
+				CCC6771113D204CD00875A72 /* BinaryStreamTests */,
+				CCA034BC13CCE75000C1E14C /* Frameworks */,
+				CC07990313CE363C00C9081B /* Products */,
+				CC0798DD13CE362F00C9081B /* BinaryStream.dylib */,
+				CCED358613CF6E060086AE0B /* libBinaryStremMobile.a */,
+				CCC6770F13D204CD00875A72 /* BinaryStreamTests.octest */,
+			);
+			sourceTree = "<group>";
+		};
+		CCA034BC13CCE75000C1E14C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCA034E613CCE76600C1E14C /* Foundation.framework */,
+				CCC676F513D2045F00875A72 /* Cocoa.framework */,
+				CCC676F713D2045F00875A72 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCA0351F13CCE7B200C1E14C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CCA0352013CCE7E500C1E14C /* InputStream.h */,
+				CCA0352113CCE7E500C1E14C /* InputStream.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		CCC676F713D2045F00875A72 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCC676F813D2045F00875A72 /* AppKit.framework */,
+				CCC676F913D2045F00875A72 /* CoreData.framework */,
+				CCC676FA13D2045F00875A72 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		CCC6771113D204CD00875A72 /* BinaryStreamTests */ = {
+			isa = PBXGroup;
+			children = (
+				CCC6771813D204CD00875A72 /* BinaryStreamTests.h */,
+				CCC6771A13D204CD00875A72 /* BinaryStreamTests.m */,
+				CCC6771213D204CD00875A72 /* Supporting Files */,
+			);
+			path = BinaryStreamTests;
+			sourceTree = "<group>";
+		};
+		CCC6771213D204CD00875A72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCC6771313D204CD00875A72 /* BinaryStreamTests-Info.plist */,
+				CCC6771413D204CD00875A72 /* InfoPlist.strings */,
+				CCC6771713D204CD00875A72 /* BinaryStreamTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CCED358913CF6E060086AE0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCC6770913D204B600875A72 /* LICENSE */,
+				CCED360613CF9CB30086AE0B /* BinaryStream-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			path = BinaryStremMobile;
+			sourceTree = "<group>";
+		};
+		CCED360413CF9BD30086AE0B /* InputStream */ = {
+			isa = PBXGroup;
+			children = (
+				CCA0351F13CCE7B200C1E14C /* Classes */,
+			);
+			name = InputStream;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CC0798DB13CE362F00C9081B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC07990713CE378100C9081B /* InputStream.h in Headers */,
+				CCED360713CF9CB30086AE0B /* BinaryStream-Prefix.pch in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCED358413CF6E060086AE0B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCED35FA13CF72150086AE0B /* InputStream.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CC0798DC13CE362F00C9081B /* BinaryStream */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC07990013CE362F00C9081B /* Build configuration list for PBXNativeTarget "BinaryStream" */;
+			buildPhases = (
+				CC0798D913CE362F00C9081B /* Sources */,
+				CC0798DA13CE362F00C9081B /* Frameworks */,
+				CC0798DB13CE362F00C9081B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BinaryStream;
+			productName = BinaryStream;
+			productReference = CC0798DD13CE362F00C9081B /* BinaryStream.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		CCC6770E13D204CD00875A72 /* BinaryStreamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCC6771C13D204CD00875A72 /* Build configuration list for PBXNativeTarget "BinaryStreamTests" */;
+			buildPhases = (
+				CCC6770A13D204CD00875A72 /* Sources */,
+				CCC6770B13D204CD00875A72 /* Frameworks */,
+				CCC6770C13D204CD00875A72 /* Resources */,
+				CCC6770D13D204CD00875A72 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BinaryStreamTests;
+			productName = BinaryStreamTests;
+			productReference = CCC6770F13D204CD00875A72 /* BinaryStreamTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		CCED358513CF6E060086AE0B /* BinaryStremMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCED35A413CF6E060086AE0B /* Build configuration list for PBXNativeTarget "BinaryStremMobile" */;
+			buildPhases = (
+				CCED358213CF6E060086AE0B /* Sources */,
+				CCED358313CF6E060086AE0B /* Frameworks */,
+				CCED358413CF6E060086AE0B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BinaryStremMobile;
+			productName = BinaryStremMobile;
+			productReference = CCED358613CF6E060086AE0B /* libBinaryStremMobile.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		CCA034AF13CCE6D900C1E14C /* Project object */ = {
@@ -26,14 +244,134 @@
 				en,
 			);
 			mainGroup = CCA034AD13CCE6D900C1E14C;
+			productRefGroup = CCA034AD13CCE6D900C1E14C;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				CC0798DC13CE362F00C9081B /* BinaryStream */,
+				CCED358513CF6E060086AE0B /* BinaryStremMobile */,
+				CCC6770E13D204CD00875A72 /* BinaryStreamTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		CCC6770C13D204CD00875A72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCC6771613D204CD00875A72 /* InfoPlist.strings in Resources */,
+				CCC6771913D204CD00875A72 /* BinaryStreamTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CCC6770D13D204CD00875A72 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC0798D913CE362F00C9081B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCED35FD13CF73F40086AE0B /* InputStream.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCC6770A13D204CD00875A72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCC6771B13D204CD00875A72 /* BinaryStreamTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCED358213CF6E060086AE0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCED35E213CF6F110086AE0B /* InputStream.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CCC6771413D204CD00875A72 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCC6771513D204CD00875A72 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		CC0798FC13CE362F00C9081B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BinaryStream-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CC0798FD13CE362F00C9081B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BinaryStream-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		CCA034B413CCE6D900C1E14C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -46,14 +384,141 @@
 			};
 			name = Release;
 		};
+		CCC6771D13D204CD00875A72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BinaryStreamTests/BinaryStreamTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "BinaryStreamTests/BinaryStreamTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		CCC6771E13D204CD00875A72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BinaryStreamTests/BinaryStreamTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "BinaryStreamTests/BinaryStreamTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		CCED35A513CF6E060086AE0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/BinaryStremMobile.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BinaryStream-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CCED35A613CF6E060086AE0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/BinaryStremMobile.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BinaryStream-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CC07990013CE362F00C9081B /* Build configuration list for PBXNativeTarget "BinaryStream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC0798FC13CE362F00C9081B /* Debug */,
+				CC0798FD13CE362F00C9081B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CCA034B213CCE6D900C1E14C /* Build configuration list for PBXProject "BinaryStream" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCA034B413CCE6D900C1E14C /* Debug */,
 				CCA034B513CCE6D900C1E14C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCC6771C13D204CD00875A72 /* Build configuration list for PBXNativeTarget "BinaryStreamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCC6771D13D204CD00875A72 /* Debug */,
+				CCC6771E13D204CD00875A72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CCED35A413CF6E060086AE0B /* Build configuration list for PBXNativeTarget "BinaryStremMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCED35A513CF6E060086AE0B /* Debug */,
+				CCED35A613CF6E060086AE0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
