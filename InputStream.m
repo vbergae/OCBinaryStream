@@ -11,17 +11,28 @@
 
 #import "InputStream.h"
 
+/**
+ Private methods
+ */
 @interface InputStream(PrivateMethods)
 
 /**
+ Checks if is possible to read size from current offset
  
+ @oaram unsingned long Size to check
+ @param BOOL Return YES if is safety read the size
+ @access private
  */
 - (BOOL)checkSizeToRead:(unsigned long)size;
 
 /**
+ Read a number of bytes and stores it in value pointer
  
+ @param unsigned long Number of bytes to read
+ @param void* Pointer to value which stores the bytes readed
+ @access private
  */
-- (void)readBytesOfLen:(unsigned long)len to:(void *)buf;
+- (void)readBytesOfLen:(unsigned long)len to:(void *)value;
 
 @end
 
@@ -86,63 +97,12 @@
 #pragma mark -
 #pragma mark Instance Methods
 
-- (char)readChar
-{
-    char value;
-    memcpy(&value, &_buffer[_currentOffset], sizeof(char));
-    _currentOffset += sizeof(char);
-    
-    return value;
-}
-
-- (unsigned char)readUnsignedChar
-{
-    unsigned char value;
-    memcpy(&value, &_buffer[_currentOffset], sizeof(unsigned char));
-    _currentOffset += sizeof(unsigned char);
-    
-    return value;
-}
-
-- (short)readShort
-{
-    return 0xFFFF;
-}
-
-- (unsigned short)readUnsignedShort
-{
-    return 0xFFFF;
-}
-
-- (int)readInt
-{
-    return 0xFFFFFFFF;
-}
-
-- (unsigned int)readUnsignedInt
-{
-    return 0xFFFFFFFF;
-}
-
-- (long)readLong
-{
-    return 0xFFFFFFFF;
-}
-
-- (unsigned long)readUnsignedLong
-{
-    return 0xFFFFFFFF;
-}
-
-#pragma mark -
-#pragma mark Private Methods
-
 - (void)openStream
 {
     const char *filename = [self.path 
-                      cStringUsingEncoding:NSStringEncodingConversionAllowLossy];
+                            cStringUsingEncoding:NSStringEncodingConversionAllowLossy];
     _file = fopen(filename, "rb");
-
+    
     NSAssert(_file, @"ERROR_OPENING_FILE");
     NSAssert(self.len > 0, @"ERROR_FILE_SIZE_ZERO");
     _currentOffset = 0;
@@ -156,23 +116,93 @@
 - (void)closeStream
 {
     free(_buffer);
-    _buffer = NULL;
-    _fileLen = 0;
-    _file = NULL;
+    _buffer     = NULL;
+    _fileLen    = 0;
+    _file       = NULL;
 }
+
+- (char)readChar
+{
+    char value;
+    [self readBytesOfLen:sizeof(char) to:&value];
+    
+    return value;
+}
+
+- (unsigned char)readUnsignedChar
+{
+    unsigned char value;
+    [self readBytesOfLen:sizeof(unsigned char) to:&value];
+    
+    return value;
+}
+
+- (short)readShort
+{
+    short value;
+    [self readBytesOfLen:sizeof(short) to:&value];
+    
+    return NSSwapShort(value);
+}
+
+- (unsigned short)readUnsignedShort
+{
+    unsigned short value;
+    [self readBytesOfLen:sizeof(unsigned short) to:&value];
+    
+    return value;
+}
+
+- (int)readInt
+{
+    int value;
+    [self readBytesOfLen:sizeof(int) to:&value];
+    
+    return NSSwapShort(value);
+}
+
+- (unsigned int)readUnsignedInt
+{
+    unsigned int value;
+    [self readBytesOfLen:sizeof(unsigned int) to:&value];
+    
+    return value;
+}
+
+- (long)readLong
+{
+    long value;
+    [self readBytesOfLen:sizeof(long) to:&value];
+    
+    return value;
+}
+
+- (unsigned long)readUnsignedLong
+{
+    unsigned long value;
+    [self readBytesOfLen:sizeof(unsigned long) to:&value];
+    
+    return value;
+}
+
+#pragma mark -
+#pragma mark Private Methods
 
 - (BOOL)checkSizeToRead:(unsigned long)size
 {
     return (size + _currentOffset <= _fileLen) ? YES : NO;
 }
 
-- (void)readBytesOfLen:(unsigned long)len to:(void *)buf
+- (void)readBytesOfLen:(unsigned long)len to:(void *)value
 {
     if (![self checkSizeToRead:len]) {
         @throw [NSException exceptionWithName:@"Buffer overflow"
                                        reason:nil
                                      userInfo:nil];
     }
+    
+    memcpy(value, &_buffer[_currentOffset], len);
+    _currentOffset += len;
 }
 
 #pragma mark -

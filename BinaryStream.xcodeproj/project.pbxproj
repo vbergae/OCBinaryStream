@@ -10,8 +10,10 @@
 		CC07990713CE378100C9081B /* InputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = CCA0352013CCE7E500C1E14C /* InputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CCC6771013D204CD00875A72 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC676F513D2045F00875A72 /* Cocoa.framework */; };
 		CCC6771613D204CD00875A72 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCC6771413D204CD00875A72 /* InfoPlist.strings */; };
-		CCC6771913D204CD00875A72 /* BinaryStreamTests.h in Resources */ = {isa = PBXBuildFile; fileRef = CCC6771813D204CD00875A72 /* BinaryStreamTests.h */; };
-		CCC6771B13D204CD00875A72 /* BinaryStreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC6771A13D204CD00875A72 /* BinaryStreamTests.m */; };
+		CCC6772113D204E700875A72 /* InputStreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC6772013D204E700875A72 /* InputStreamTests.m */; };
+		CCC6772413D2051E00875A72 /* InputStream.h in Resources */ = {isa = PBXBuildFile; fileRef = CCA0352013CCE7E500C1E14C /* InputStream.h */; };
+		CCC6772513D205AA00875A72 /* BinaryStream.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CC0798DD13CE362F00C9081B /* BinaryStream.dylib */; };
+		CCC6772713D2068700875A72 /* files in Resources */ = {isa = PBXBuildFile; fileRef = CCC6772613D2068700875A72 /* files */; };
 		CCED358713CF6E060086AE0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA034E613CCE76600C1E14C /* Foundation.framework */; };
 		CCED35E213CF6F110086AE0B /* InputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA0352113CCE7E500C1E14C /* InputStream.m */; };
 		CCED35FA13CF72150086AE0B /* InputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = CCA0352013CCE7E500C1E14C /* InputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -20,8 +22,19 @@
 		CCED360813CF9CCC0086AE0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA034E613CCE76600C1E14C /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CCC6772213D2051200875A72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA034AF13CCE6D900C1E14C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC0798DC13CE362F00C9081B;
+			remoteInfo = BinaryStream;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		CC0798DD13CE362F00C9081B /* BinaryStream.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = BinaryStream.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC450CFB13D3208300FF44BB /* README.rst */ = {isa = PBXFileReference; name = README.rst; path = BinaryStream.xcodeproj/README.rst; sourceTree = SOURCE_ROOT; };
 		CCA034E613CCE76600C1E14C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CCA0352013CCE7E500C1E14C /* InputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputStream.h; sourceTree = "<group>"; };
 		CCA0352113CCE7E500C1E14C /* InputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputStream.m; sourceTree = "<group>"; };
@@ -31,11 +44,12 @@
 		CCC676FA13D2045F00875A72 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CCC6770913D204B600875A72 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		CCC6770F13D204CD00875A72 /* BinaryStreamTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BinaryStreamTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCC6771313D204CD00875A72 /* BinaryStreamTests-Info.plist */ = {isa = PBXFileReference; path = "BinaryStreamTests-Info.plist"; sourceTree = "<group>"; };
+		CCC6771313D204CD00875A72 /* BinaryStreamTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BinaryStreamTests-Info.plist"; sourceTree = "<group>"; };
 		CCC6771513D204CD00875A72 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CCC6771713D204CD00875A72 /* BinaryStreamTests-Prefix.pch */ = {isa = PBXFileReference; path = "BinaryStreamTests-Prefix.pch"; sourceTree = "<group>"; };
-		CCC6771813D204CD00875A72 /* BinaryStreamTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryStreamTests.h; sourceTree = "<group>"; };
-		CCC6771A13D204CD00875A72 /* BinaryStreamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryStreamTests.m; sourceTree = "<group>"; };
+		CCC6771713D204CD00875A72 /* BinaryStreamTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BinaryStreamTests-Prefix.pch"; sourceTree = "<group>"; };
+		CCC6771F13D204E700875A72 /* InputStreamTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputStreamTests.h; sourceTree = "<group>"; };
+		CCC6772013D204E700875A72 /* InputStreamTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputStreamTests.m; sourceTree = "<group>"; };
+		CCC6772613D2068700875A72 /* files */ = {isa = PBXFileReference; lastKnownFileType = folder; path = files; sourceTree = "<group>"; };
 		CCED358613CF6E060086AE0B /* libBinaryStremMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBinaryStremMobile.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCED360613CF9CB30086AE0B /* BinaryStream-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BinaryStream-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -54,6 +68,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCC6771013D204CD00875A72 /* Cocoa.framework in Frameworks */,
+				CCC6772513D205AA00875A72 /* BinaryStream.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +136,8 @@
 		CCC6771113D204CD00875A72 /* BinaryStreamTests */ = {
 			isa = PBXGroup;
 			children = (
-				CCC6771813D204CD00875A72 /* BinaryStreamTests.h */,
-				CCC6771A13D204CD00875A72 /* BinaryStreamTests.m */,
+				CCC6771F13D204E700875A72 /* InputStreamTests.h */,
+				CCC6772013D204E700875A72 /* InputStreamTests.m */,
 				CCC6771213D204CD00875A72 /* Supporting Files */,
 			);
 			path = BinaryStreamTests;
@@ -131,6 +146,7 @@
 		CCC6771213D204CD00875A72 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CCC6772613D2068700875A72 /* files */,
 				CCC6771313D204CD00875A72 /* BinaryStreamTests-Info.plist */,
 				CCC6771413D204CD00875A72 /* InfoPlist.strings */,
 				CCC6771713D204CD00875A72 /* BinaryStreamTests-Prefix.pch */,
@@ -143,6 +159,7 @@
 			children = (
 				CCC6770913D204B600875A72 /* LICENSE */,
 				CCED360613CF9CB30086AE0B /* BinaryStream-Prefix.pch */,
+				CC450CFB13D3208300FF44BB /* README.rst */,
 			);
 			name = "Supporting Files";
 			path = BinaryStremMobile;
@@ -208,6 +225,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				CCC6772313D2051200875A72 /* PBXTargetDependency */,
 			);
 			name = BinaryStreamTests;
 			productName = BinaryStreamTests;
@@ -261,7 +279,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCC6771613D204CD00875A72 /* InfoPlist.strings in Resources */,
-				CCC6771913D204CD00875A72 /* BinaryStreamTests.h in Resources */,
+				CCC6772413D2051E00875A72 /* InputStream.h in Resources */,
+				CCC6772713D2068700875A72 /* files in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCC6771B13D204CD00875A72 /* BinaryStreamTests.m in Sources */,
+				CCC6772113D204E700875A72 /* InputStreamTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +328,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CCC6772313D2051200875A72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC0798DC13CE362F00C9081B /* BinaryStream */;
+			targetProxy = CCC6772213D2051200875A72 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CCC6771413D204CD00875A72 /* InfoPlist.strings */ = {
@@ -513,6 +540,7 @@
 				CCC6771E13D204CD00875A72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CCED35A413CF6E060086AE0B /* Build configuration list for PBXNativeTarget "BinaryStremMobile" */ = {
 			isa = XCConfigurationList;

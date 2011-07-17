@@ -37,10 +37,11 @@
 
 - (void)testSetPath
 {
-    NSString *path = @"/Users/vbergae/Documents/Cocoa/BinaryStream/test1.bin";
-    [_inputStream setPath:path];
+    NSString *path = @"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test1.bin";
+    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test1.bin"];
     
-    STAssertTrue([_inputStream.path isEqualToString:path], @"Path propertu broken");
+    STAssertTrue([_inputStream.path isEqualToString:path], 
+                 @"Path property broken");
 }
 
 - (void)testSetDefaultOffset
@@ -65,7 +66,7 @@
 
 - (void)testOpenCloseStream
 {
-    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/test1.bin"];
+    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test1.bin"];
     
     // Opening file
     STAssertNoThrow([_inputStream openStream], @"openStrem fails");
@@ -90,12 +91,10 @@
 
 - (void)testReadChar
 {
-    NSLog(@"hex(128): 0x%x", -128);
-    
-    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/test1.bin"];
+    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test1.bin"];
     [_inputStream openStream];
     
-    // Tests first 4 bytes in test1.bin file 
+    // Tests first 8 bytes in test1.bin file 
     // File contents (0x00, 0x01, 0x0A, 0xFF, 0x80, 0x81, 0x79, 0xFF)
     char value;
     
@@ -142,8 +141,8 @@
                  @"offset should be 6 but is %d", [_inputStream offset]);
 
     value = [_inputStream readChar];
-    STAssertTrue(value == 128, 
-                 @"First byte should be 128 but is %d", 
+    STAssertTrue(value == 121, 
+                 @"First byte should be 121 but is %d", 
                  value);
     STAssertTrue([_inputStream offset] == 7, 
                  @"offset should be 7 but is %d", [_inputStream offset]);
@@ -160,7 +159,7 @@
 
 - (void)testReadUnsignedChar
 {
-    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/test1.bin"];
+    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test1.bin"];
     [_inputStream openStream];
     
     // Tests first 4 bytes in test1.bin file 
@@ -224,6 +223,88 @@
                  @"offset should be 1 but is %d", [_inputStream offset]);
     
     [_inputStream closeStream];    
+}
+
+- (void)testReadShort
+{
+    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test2.bin"];
+    [_inputStream openStream];
+    
+    // Tests first 8 bytes in test2.bin file 
+    // File contents (0x00, 0x00, 0x00, 0x01, 0xFF, 0xFF, 0x00, 0xFF)
+    
+    short value;
+    
+    value = [_inputStream readShort];
+    STAssertTrue(value == (short)0, 
+                 @"First short should be 0 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 2, 
+                 @"offset should be 2 but is %d", [_inputStream offset]);
+
+    value = [_inputStream readShort];
+    STAssertTrue(value == (short)1, 
+                 @"Short should be 1 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 4, 
+                 @"offset should be 4 but is %d", [_inputStream offset]);
+
+    value = [_inputStream readShort];
+    STAssertTrue(value == (short)-1, 
+                 @"Short should be -1 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 6, 
+                 @"offset should be 4 but is %d", [_inputStream offset]);
+
+    value = [_inputStream readShort];
+    STAssertTrue(value == (short)255, 
+                 @"Short should be 255 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 8, 
+                 @"offset should be 4 but is %d", [_inputStream offset]);
+    
+    [_inputStream closeStream];
+}
+
+- (void)testReadUnsignedShort
+{
+    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test2.bin"];
+    [_inputStream openStream];
+    
+    // Tests first 8 bytes in test2.bin file 
+    // File contents (0x00, 0x00, 0x00, 0x01, 0xFF, 0xFF, 0x00, 0xFF)
+    
+    unsigned short value;
+    
+    value = [_inputStream readShort];
+    STAssertTrue(value == (unsigned short)0, 
+                 @"First short should be 0 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 2, 
+                 @"offset should be 2 but is %d", [_inputStream offset]);
+    
+    value = [_inputStream readShort];
+    STAssertTrue(value == (unsigned short)1, 
+                 @"Short should be 1 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 4, 
+                 @"offset should be 4 but is %d", [_inputStream offset]);
+    
+    value = [_inputStream readShort];
+    STAssertTrue(value == (unsigned short)65535, 
+                 @"Short should be 65535 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 6, 
+                 @"offset should be 4 but is %d", [_inputStream offset]);
+    
+    value = [_inputStream readShort];
+    STAssertTrue(value == (unsigned short)255, 
+                 @"Short should be 255 but is %d", 
+                 value);
+    STAssertTrue([_inputStream offset] == 8, 
+                 @"offset should be 4 but is %d", [_inputStream offset]);
+    
+    [_inputStream closeStream];
 }
 
 #pragma mark -
