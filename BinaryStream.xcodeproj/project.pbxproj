@@ -34,7 +34,7 @@
 
 /* Begin PBXFileReference section */
 		CC0798DD13CE362F00C9081B /* BinaryStream.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = BinaryStream.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC450CFB13D3208300FF44BB /* README.rst */ = {isa = PBXFileReference; name = README.rst; path = BinaryStream.xcodeproj/README.rst; sourceTree = SOURCE_ROOT; };
+		CC2F341613D322D1008D4394 /* README.rst */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.rst; sourceTree = SOURCE_ROOT; };
 		CCA034E613CCE76600C1E14C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CCA0352013CCE7E500C1E14C /* InputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputStream.h; sourceTree = "<group>"; };
 		CCA0352113CCE7E500C1E14C /* InputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputStream.m; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				CCC6770913D204B600875A72 /* LICENSE */,
+				CC2F341613D322D1008D4394 /* README.rst */,
 				CCED360613CF9CB30086AE0B /* BinaryStream-Prefix.pch */,
-				CC450CFB13D3208300FF44BB /* README.rst */,
 			);
 			name = "Supporting Files";
 			path = BinaryStremMobile;
