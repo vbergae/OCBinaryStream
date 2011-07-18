@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>BinaryStream: InputStream Class Reference</title>
+<title>OCBinaryStream: InputStream Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +19,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">BinaryStream&#160;<span id="projectnumber">r1</span></div>
-   <div id="projectbrief">Stream reader for Cocoa</div>
+   <div id="projectname">OCBinaryStream&#160;<span id="projectnumber">1.0.0-dev</span></div>
+   <div id="projectbrief">Objective-C Binary Stream</div>
   </td>
  </tr>
  </tbody>
@@ -83,6 +83,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">(unsigned int)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_input_stream.html#a22cb665a22478db31f6feca100a64faa">readUnsignedInt</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">(long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_input_stream.html#ab15c2fccb17581b51f08e10ecfbb156e">readLong</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">(unsigned long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_input_stream.html#a73c187cd8f63c5e5217c574fabccbe28">readUnsignedLong</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">(float)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_input_stream.html#ad730bdea782bf690fc91f8bbeb7bbd43">readFloat</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">(double)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_input_stream.html#adabede432eca6f0a40bc53956f0e0d96">readDouble</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_input_stream.html#acc9a34c4b04a231bf8f6dceb0e166bcc">readString</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_input_stream.html#af0b35b953773eefd1c276373ea066223">readStringOfLen:</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_input_stream.html#a8b1d776fc140fd03dfe8aec4114ac56a">checkSizeToRead:</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_input_stream.html#a5615b5501a7586393bfdbe1649c59d45">readBytesOfLen:to:</a></td></tr>
 <tr><td colspan="2"><h2><a name="properties"></a>
@@ -91,6 +95,7 @@ Properties</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_input_stream.html#a1e64aa4dec1eb8f7b98c074be8f7ce70">offset</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_input_stream.html#aad039591ed459102a974cfb69b9a6a9f">len</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_input_stream.html#a14784155ba3186cc03fe24e381242652">isOpen</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">NSStringEncoding&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_input_stream.html#a5e737dfbf144152cfcc34517a4b4f3ca">stringEncoding</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Class to read a binary file</p>
@@ -235,6 +240,42 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="adabede432eca6f0a40bc53956f0e0d96"></a><!-- doxytag: member="InputStream::readDouble" ref="adabede432eca6f0a40bc53956f0e0d96" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (double) readDouble </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Read next double in stream</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>double  public </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad730bdea782bf690fc91f8bbeb7bbd43"></a><!-- doxytag: member="InputStream::readFloat" ref="ad730bdea782bf690fc91f8bbeb7bbd43" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (float) readFloat </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Read next float in stream</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>float  public </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="af22321ddf954cecd0f0a7aea6a9b2f71"></a><!-- doxytag: member="InputStream::readInt" ref="af22321ddf954cecd0f0a7aea6a9b2f71" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -286,6 +327,49 @@ Properties</h2></td></tr>
 <div class="memdoc">
 <p>Read next short in stream</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>short  public </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acc9a34c4b04a231bf8f6dceb0e166bcc"></a><!-- doxytag: member="InputStream::readString" ref="acc9a34c4b04a231bf8f6dceb0e166bcc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString *) readString </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Reads a string with a len of the first unsigned byte</p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>NSString  public </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af0b35b953773eefd1c276373ea066223"></a><!-- doxytag: member="InputStream::readStringOfLen:" ref="af0b35b953773eefd1c276373ea066223" args="(unsigned long len)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString *) readStringOfLen: </td>
+          <td></td>
+          <td class="paramtype">(unsigned long)&#160;</td>
+          <td class="paramname"><em>len</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Reads a string with the specified len</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>long </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>NSString  public </dd></dl>
 
 </div>
 </div>
@@ -418,9 +502,23 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5e737dfbf144152cfcc34517a4b4f3ca"></a><!-- doxytag: member="InputStream::stringEncoding" ref="a5e737dfbf144152cfcc34517a4b4f3ca" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSStringEncoding InputStream.)stringEncoding<code> [read, write, assign]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Sets or gets the string enconding. Default is NSUTF8StringEncoding </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="_input_stream_8h_source.html">InputStream.h</a></li>
-<li>InputStream.m</li>
+<li>/Users/vbergae/Documents/Cocoa/BinaryStream/<a class="el" href="_input_stream_8h_source.html">InputStream.h</a></li>
+<li>/Users/vbergae/Documents/Cocoa/BinaryStream/InputStream.m</li>
 </ul>
 </div>
 <!-- window showing the filter options -->
@@ -437,7 +535,7 @@ Properties</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sun Jul 17 2011 15:49:08 for BinaryStream by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jul 18 2011 22:44:01 for OCBinaryStream by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>

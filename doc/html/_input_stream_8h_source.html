@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>BinaryStream: InputStream.h Source File</title>
+<title>OCBinaryStream: /Users/vbergae/Documents/Cocoa/BinaryStream/InputStream.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,8 +19,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">BinaryStream&#160;<span id="projectnumber">r1</span></div>
-   <div id="projectbrief">Stream reader for Cocoa</div>
+   <div id="projectname">OCBinaryStream&#160;<span id="projectnumber">1.0.0-dev</span></div>
+   <div id="projectbrief">Objective-C Binary Stream</div>
   </td>
  </tr>
  </tbody>
@@ -56,7 +56,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">InputStream.h</div>  </div>
+<div class="title">/Users/vbergae/Documents/Cocoa/BinaryStream/InputStream.h</div>  </div>
 </div>
 <div class="contents">
 <div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//  This file is part of the BinaryStream package.</span>
@@ -74,47 +74,57 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00013"></a>00013 
 <a name="l00019"></a><a class="code" href="interface_input_stream.html">00019</a> <span class="keyword">@interface </span><a class="code" href="interface_input_stream.html">InputStream</a> : NSObject {
 <a name="l00020"></a>00020 <span class="keyword">@private</span>
-<a name="l00021"></a>00021     NSString        *_path;
-<a name="l00022"></a>00022     FILE            *_file;
-<a name="l00023"></a>00023     <span class="keywordtype">char</span>            *_buffer;
-<a name="l00024"></a>00024     <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>   _currentOffset;
-<a name="l00025"></a>00025     <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>   _fileLen;
-<a name="l00026"></a>00026 }
-<a name="l00027"></a>00027 
-<a name="l00031"></a><a class="code" href="interface_input_stream.html#a34676450a18ef9d7c1cb1729cf85f97b">00031</a> <span class="keyword">@property</span> (nonatomic, retain) NSString *path;
-<a name="l00035"></a><a class="code" href="interface_input_stream.html#a1e64aa4dec1eb8f7b98c074be8f7ce70">00035</a> <span class="keyword">@property</span> (nonatomic, readonly) <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> offset;
-<a name="l00039"></a><a class="code" href="interface_input_stream.html#aad039591ed459102a974cfb69b9a6a9f">00039</a> <span class="keyword">@property</span> (nonatomic, readonly) <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> len;
-<a name="l00043"></a><a class="code" href="interface_input_stream.html#a14784155ba3186cc03fe24e381242652">00043</a> <span class="keyword">@property</span> (nonatomic, readonly) BOOL isOpen;
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="preprocessor">#pragma mark -</span>
-<a name="l00046"></a>00046 <span class="preprocessor"></span><span class="preprocessor">#pragma mark Initializers</span>
-<a name="l00047"></a>00047 <span class="preprocessor"></span>
-<a name="l00055"></a>00055 - (id)initWithPath:(NSString *)path;
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057 <span class="preprocessor">#pragma mark -</span>
-<a name="l00058"></a>00058 <span class="preprocessor"></span><span class="preprocessor">#pragma mark Instance Methods</span>
-<a name="l00059"></a>00059 <span class="preprocessor"></span>
-<a name="l00065"></a>00065 - (void)openStream;
-<a name="l00066"></a>00066 
-<a name="l00072"></a>00072 - (void)closeStream;
-<a name="l00073"></a>00073 
-<a name="l00080"></a>00080 - (char)readChar;
-<a name="l00081"></a>00081 
-<a name="l00088"></a>00088 - (<span class="keywordtype">unsigned</span> char)readUnsignedChar;
-<a name="l00089"></a>00089 
-<a name="l00096"></a>00096 - (short)readShort;
-<a name="l00097"></a>00097 
-<a name="l00104"></a>00104 - (<span class="keywordtype">unsigned</span> short)readUnsignedShort;
-<a name="l00105"></a>00105 
-<a name="l00112"></a>00112 - (int)readInt;
-<a name="l00113"></a>00113 
-<a name="l00120"></a>00120 - (<span class="keywordtype">unsigned</span> int)readUnsignedInt;
-<a name="l00121"></a>00121 
-<a name="l00128"></a>00128 - (long)readLong;
-<a name="l00129"></a>00129 
-<a name="l00136"></a>00136 - (<span class="keywordtype">unsigned</span> long)readUnsignedLong;
-<a name="l00137"></a>00137 
-<a name="l00138"></a>00138 <span class="keyword">@end</span>
+<a name="l00021"></a>00021     NSString            *_path;
+<a name="l00022"></a>00022     FILE                *_file;
+<a name="l00023"></a>00023     <span class="keywordtype">char</span>                *_buffer;
+<a name="l00024"></a>00024     <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>       _currentOffset;
+<a name="l00025"></a>00025     <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>       _fileLen;
+<a name="l00026"></a>00026     NSStringEncoding    _stringEncoding;
+<a name="l00027"></a>00027 }
+<a name="l00028"></a>00028 
+<a name="l00032"></a><a class="code" href="interface_input_stream.html#a34676450a18ef9d7c1cb1729cf85f97b">00032</a> <span class="keyword">@property</span> (nonatomic, retain) NSString *path;
+<a name="l00036"></a><a class="code" href="interface_input_stream.html#a1e64aa4dec1eb8f7b98c074be8f7ce70">00036</a> <span class="keyword">@property</span> (nonatomic, readonly) <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> offset;
+<a name="l00040"></a><a class="code" href="interface_input_stream.html#aad039591ed459102a974cfb69b9a6a9f">00040</a> <span class="keyword">@property</span> (nonatomic, readonly) <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> len;
+<a name="l00044"></a><a class="code" href="interface_input_stream.html#a14784155ba3186cc03fe24e381242652">00044</a> <span class="keyword">@property</span> (nonatomic, readonly) BOOL isOpen;
+<a name="l00048"></a><a class="code" href="interface_input_stream.html#a5e737dfbf144152cfcc34517a4b4f3ca">00048</a> <span class="keyword">@property</span> (nonatomic, assign) NSStringEncoding stringEncoding;
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 <span class="preprocessor">#pragma mark -</span>
+<a name="l00051"></a>00051 <span class="preprocessor"></span><span class="preprocessor">#pragma mark Initializers</span>
+<a name="l00052"></a>00052 <span class="preprocessor"></span>
+<a name="l00060"></a>00060 - (id)initWithPath:(NSString *)path;
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062 <span class="preprocessor">#pragma mark -</span>
+<a name="l00063"></a>00063 <span class="preprocessor"></span><span class="preprocessor">#pragma mark Instance Methods</span>
+<a name="l00064"></a>00064 <span class="preprocessor"></span>
+<a name="l00070"></a>00070 - (void)openStream;
+<a name="l00071"></a>00071 
+<a name="l00077"></a>00077 - (void)closeStream;
+<a name="l00078"></a>00078 
+<a name="l00085"></a>00085 - (char)readChar;
+<a name="l00086"></a>00086 
+<a name="l00093"></a>00093 - (<span class="keywordtype">unsigned</span> char)readUnsignedChar;
+<a name="l00094"></a>00094 
+<a name="l00101"></a>00101 - (short)readShort;
+<a name="l00102"></a>00102 
+<a name="l00109"></a>00109 - (<span class="keywordtype">unsigned</span> short)readUnsignedShort;
+<a name="l00110"></a>00110 
+<a name="l00117"></a>00117 - (int)readInt;
+<a name="l00118"></a>00118 
+<a name="l00125"></a>00125 - (<span class="keywordtype">unsigned</span> int)readUnsignedInt;
+<a name="l00126"></a>00126 
+<a name="l00133"></a>00133 - (long)readLong;
+<a name="l00134"></a>00134 
+<a name="l00141"></a>00141 - (<span class="keywordtype">unsigned</span> long)readUnsignedLong;
+<a name="l00142"></a>00142 
+<a name="l00149"></a>00149 - (float)readFloat;
+<a name="l00150"></a>00150 
+<a name="l00157"></a>00157 - (double)readDouble;
+<a name="l00158"></a>00158 
+<a name="l00165"></a>00165 - (NSString *)readString;
+<a name="l00166"></a>00166 
+<a name="l00174"></a>00174 - (NSString *)readStringOfLen:(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)len;
+<a name="l00175"></a>00175 
+<a name="l00176"></a>00176 <span class="keyword">@end</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->
@@ -131,7 +141,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sun Jul 17 2011 15:49:08 for BinaryStream by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Mon Jul 18 2011 22:44:01 for OCBinaryStream by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </small></address>
 </body>
