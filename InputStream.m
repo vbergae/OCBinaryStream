@@ -220,4 +220,12 @@
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark Debug methods
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"Path: %@; Current Offset: %lu; File len: %lu; Open: %b", self.path, self.offset, self.len,self.isOpen];
+}
+
 @end
