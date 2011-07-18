@@ -141,6 +141,22 @@
 - (unsigned long)readUnsignedLong;
 
 /**
+ Read next float in stream
+ 
+ @return float
+ @access public
+ */
+- (float)readFloat;
+
+/**
+ Read next double in stream
+ 
+ @return double
+ @access public
+ */
+- (double)readDouble;
+
+/**
  Reads a string with a len of the first unsigned byte
  
  @return NSString

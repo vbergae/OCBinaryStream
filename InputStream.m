@@ -187,6 +187,22 @@
     return NSSwapLong(value);
 }
 
+- (float)readFloat
+{
+    float value;
+    [self readBytesOfLen:sizeof(float) to:&value];
+    
+    return value;
+}
+
+- (double)readDouble
+{
+    double value;
+    [self readBytesOfLen:sizeof(double) to:&value];
+    
+    return value;
+}
+
 - (NSString *)readString
 {
     unsigned char stringLen = [self readUnsignedChar];
