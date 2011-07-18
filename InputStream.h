@@ -18,11 +18,12 @@
  */
 @interface InputStream : NSObject {
 @private
-    NSString        *_path;
-    FILE            *_file;
-    char            *_buffer;
-    unsigned long   _currentOffset;
-    unsigned long   _fileLen;
+    NSString            *_path;
+    FILE                *_file;
+    char                *_buffer;
+    unsigned long       _currentOffset;
+    unsigned long       _fileLen;
+    NSStringEncoding    _stringEncoding;
 }
 
 /**
@@ -41,6 +42,10 @@
  Return YES if the file is open and ready
  */
 @property (nonatomic, readonly) BOOL isOpen;
+/**
+ Sets or gets the string enconding. Default is NSUTF8StringEncoding
+ */
+@property (nonatomic, assign) NSStringEncoding stringEncoding;
 
 #pragma mark -
 #pragma mark Initializers
@@ -134,5 +139,22 @@
  @access public  
  */
 - (unsigned long)readUnsignedLong;
+
+/**
+ Reads a string with a len of the first unsigned byte
+ 
+ @return NSString
+ @access public
+ */
+- (NSString *)readString;
+
+/**
+ Reads a string with the specified len
+ 
+ @param unsigned long
+ @return NSString
+ @access public
+ */
+- (NSString *)readStringOfLen:(unsigned long)len;
 
 @end

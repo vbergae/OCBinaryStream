@@ -2836,7 +2836,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>241</integer>
+					<integer>246</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -3544,7 +3544,7 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>332706365.67010498</real>
+		<real>332707589.92681199</real>
 		<string>{16948, 1526}</string>
 		<string>{18340, 0}</string>
 		<string>@implementation BinaryStreamTests</string>
@@ -3688,7 +3688,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>66</integer>
+					<integer>43</integer>
 				</dict>
 			</array>
 		</dict>
@@ -7253,7 +7253,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>43</integer>
+					<integer>66</integer>
 				</dict>
 			</array>
 		</dict>
@@ -7879,10 +7879,10 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332706365.67130202</real>
-		<string>{3552, 886}</string>
-		<string>{4324, 56}</string>
-		<string>-description</string>
+		<real>332707589.928123</real>
+		<string>{3293, 834}</string>
+		<string>{3744, 0}</string>
+		<string>@implementation InputStream</string>
 		<string>InputStream.m</string>
 		<dict>
 			<key>$class</key>
@@ -8185,9 +8185,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332706365.67111701</real>
-		<string>{378, 809}</string>
-		<string>{581, 0}</string>
+		<real>332707589.927894</real>
+		<string>{2046, 625}</string>
+		<string>{2615, 0}</string>
 		<string>@interface InputStream</string>
 		<dict>
 			<key>$class</key>
@@ -12083,7 +12083,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332706365.66734898</real>
+		<real>332707589.92384499</real>
 		<string>{16948, 1526}</string>
 		<string>{18340, 0}</string>
 		<dict>
@@ -12509,9 +12509,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332706365.66751099</real>
-		<string>{378, 809}</string>
-		<string>{581, 0}</string>
+		<real>332707589.92403102</real>
+		<string>{2046, 625}</string>
+		<string>{2615, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>

@@ -38,10 +38,11 @@
 
 @implementation InputStream
 
-@synthesize path    = _path;
-@synthesize offset  = _currentOffset;
+@synthesize path            = _path;
+@synthesize offset          = _currentOffset;
 @dynamic    len;
 @dynamic    isOpen;
+@synthesize stringEncoding  = _stringEncoding;
 
 #pragma mark -
 #pragma mark Initializers
@@ -55,7 +56,8 @@
         _file           = NULL;
         _buffer         = NULL;
         _currentOffset  = 0;
-        _fileLen        = 0;        
+        _fileLen        = 0;
+        _stringEncoding = NSUTF8StringEncoding;
     }
     
     return self;
@@ -183,6 +185,22 @@
     [self readBytesOfLen:sizeof(unsigned long) to:&value];
     
     return NSSwapLong(value);
+}
+
+- (NSString *)readString
+{
+    unsigned char stringLen = [self readUnsignedChar];
+    
+    return [self readStringOfLen:stringLen];
+}
+
+- (NSString *)readStringOfLen:(unsigned long)len
+{
+    const char *value;
+    [self readBytesOfLen:len to:&value];
+    
+    return [NSString stringWithCString:value
+                              encoding:self.stringEncoding];
 }
 
 #pragma mark -
