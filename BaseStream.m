@@ -1,6 +1,6 @@
 //  This file is part of the BinaryStream package.
 //
-//  InputStream.h
+//  BaseStream.h
 //  BinaryStream
 //
 //  Created by Víctor on 21/07/11.

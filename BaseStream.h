@@ -1,6 +1,6 @@
 //  This file is part of the BinaryStream package.
 //
-//  InputStream.h
+//  BaseStream.h
 //  BinaryStream
 //
 //  Created by Víctor on 21/07/11.
@@ -18,7 +18,7 @@
  It shouldn't be used directly, you must make use of InputStream
  and OutputStream (or inherit from it).
  
- @author Víctor Berga <victor
+ @author Víctor Berga <victor@victorberga.com>
  */
 @interface BaseStream : NSObject {
 @protected
