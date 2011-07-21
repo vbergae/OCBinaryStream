@@ -11,6 +11,15 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ BaseStream - Base class to read and write streams
+
+ BaseStream is used as base class for both classes InputStream and OutputStream. 
+ It shouldn't be used directly, you must make use of InputStream
+ and OutputStream (or inherit from it).
+ 
+ @author Víctor Berga <victor
+ */
 @interface BaseStream : NSObject {
 @protected
     NSString            *_path;        

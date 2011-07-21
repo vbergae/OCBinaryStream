@@ -19,9 +19,16 @@
 /**
  Checks if is possible to read size from current offset
  
+ @param unsingned long Size to check
+ @param BOOL Return YES if is safety read the size
+ */
+- (BOOL)checkSizeToRead:(unsigned long)size;
+
+/**
+ Checks if is possible to read size from current offset
+ 
  @oaram unsingned long Size to check
  @param BOOL Return YES if is safety read the size
- @access private
  */
 - (BOOL)checkSizeToRead:(unsigned long)size;
 
@@ -30,7 +37,7 @@
  
  @param unsigned long Number of bytes to read
  @param void* Pointer to value which stores the bytes readed
- @access private
+ @exception NSException BUFFER_OVERFLOW
  */
 - (void)readBytesOfLen:(unsigned long)len to:(void *)value;
 
@@ -171,11 +178,7 @@
 
 - (void)readBytesOfLen:(unsigned long)len to:(void *)value
 {
-    if (![self checkSizeToRead:len]) {
-        @throw [NSException exceptionWithName:@"Buffer overflow"
-                                       reason:nil
-                                     userInfo:nil];
-    }
+    NSAssert([self checkSizeToRead:len], @"BUFFER_OVERFLOW");
     
     memcpy(value, &_buffer[_currentOffset], len);
     _currentOffset += len;

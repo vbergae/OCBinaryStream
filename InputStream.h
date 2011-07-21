@@ -25,14 +25,15 @@
 /**
  Open the stream in read mode
  
- @access public
+ @exception NSException ERROR_OPENING_FILE
+ @exception NSException ERRROR_FILE_SIZE_ZERO
  */
 - (void)openStream;
 
 /**
  Close the stream
  
- @access public
+@throws Exception on error
  */
 - (void)closeStream;
 
@@ -40,7 +41,6 @@
  Read next char in stream
  
  @return char
- @access public
  */
 - (char)readChar;
 
@@ -48,7 +48,6 @@
  Read next unsigned char in stream
  
  @return unsigned char
- @access public
  */
 - (unsigned char)readUnsignedChar;
 
@@ -56,7 +55,6 @@
  Read next short in stream
  
  @return short
- @access public 
  */
 - (short)readShort;
 
@@ -64,7 +62,6 @@
  Read next unsigned short in stream
  
  @return unsigned short
- @access public 
  */
 - (unsigned short)readUnsignedShort;
 
@@ -72,7 +69,6 @@
  Read next int in stream
  
  @return int
- @access public 
  */
 - (int)readInt;
 
@@ -80,7 +76,6 @@
  Read next unsigned int in stream
  
  @return unsigned int
- @access public  
  */
 - (unsigned int)readUnsignedInt;
 
@@ -88,7 +83,6 @@
  Read next long in stream
  
  @return long
- @access public  
  */
 - (long)readLong;
 
@@ -96,7 +90,6 @@
  Read next unsigned long in stream
  
  @return unsigned long
- @access public  
  */
 - (unsigned long)readUnsignedLong;
 
@@ -104,7 +97,6 @@
  Read next float in stream
  
  @return float
- @access public
  */
 - (float)readFloat;
 
@@ -112,7 +104,6 @@
  Read next double in stream
  
  @return double
- @access public
  */
 - (double)readDouble;
 
@@ -120,7 +111,6 @@
  Reads a string with a len of the first unsigned byte
  
  @return NSString
- @access public
  */
 - (NSString *)readString;
 
@@ -129,7 +119,6 @@
  
  @param unsigned long
  @return NSString
- @access public
  */
 - (NSString *)readStringOfLen:(unsigned long)len;
 
