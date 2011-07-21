@@ -24,6 +24,10 @@
 		CCEFACF513D89F71007DA21E /* BaseStream.h in Headers */ = {isa = PBXBuildFile; fileRef = CCEFACF213D89F71007DA21E /* BaseStream.h */; };
 		CCEFACF613D89F71007DA21E /* BaseStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEFACF313D89F71007DA21E /* BaseStream.m */; };
 		CCEFACF713D89F71007DA21E /* BaseStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEFACF313D89F71007DA21E /* BaseStream.m */; };
+		CCEFACFB13D8C619007DA21E /* OutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = CCEFACF913D8C619007DA21E /* OutputStream.h */; };
+		CCEFACFC13D8C619007DA21E /* OutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = CCEFACF913D8C619007DA21E /* OutputStream.h */; };
+		CCEFACFD13D8C619007DA21E /* OutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEFACFA13D8C619007DA21E /* OutputStream.m */; };
+		CCEFACFE13D8C619007DA21E /* OutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEFACFA13D8C619007DA21E /* OutputStream.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,8 @@
 		CCED360613CF9CB30086AE0B /* BinaryStream-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BinaryStream-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		CCEFACF213D89F71007DA21E /* BaseStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseStream.h; sourceTree = "<group>"; };
 		CCEFACF313D89F71007DA21E /* BaseStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseStream.m; sourceTree = "<group>"; };
+		CCEFACF913D8C619007DA21E /* OutputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutputStream.h; sourceTree = "<group>"; };
+		CCEFACFA13D8C619007DA21E /* OutputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutputStream.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,8 @@
 				CCA0352113CCE7E500C1E14C /* InputStream.m */,
 				CCEFACF213D89F71007DA21E /* BaseStream.h */,
 				CCEFACF313D89F71007DA21E /* BaseStream.m */,
+				CCEFACF913D8C619007DA21E /* OutputStream.h */,
+				CCEFACFA13D8C619007DA21E /* OutputStream.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -191,6 +199,7 @@
 				CC07990713CE378100C9081B /* InputStream.h in Headers */,
 				CCED360713CF9CB30086AE0B /* BinaryStream-Prefix.pch in Headers */,
 				CCEFACF413D89F71007DA21E /* BaseStream.h in Headers */,
+				CCEFACFB13D8C619007DA21E /* OutputStream.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +209,7 @@
 			files = (
 				CCED35FA13CF72150086AE0B /* InputStream.h in Headers */,
 				CCEFACF513D89F71007DA21E /* BaseStream.h in Headers */,
+				CCEFACFC13D8C619007DA21E /* OutputStream.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +329,7 @@
 			files = (
 				CCED35FD13CF73F40086AE0B /* InputStream.m in Sources */,
 				CCEFACF613D89F71007DA21E /* BaseStream.m in Sources */,
+				CCEFACFD13D8C619007DA21E /* OutputStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +347,7 @@
 			files = (
 				CCED35E213CF6F110086AE0B /* InputStream.m in Sources */,
 				CCEFACF713D89F71007DA21E /* BaseStream.m in Sources */,
+				CCEFACFE13D8C619007DA21E /* OutputStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
