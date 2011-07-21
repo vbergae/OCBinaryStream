@@ -324,4 +324,136 @@
     <Anchor>a738995a5772bea2f841916a342a2d4a6</Anchor>
     <Abstract>Read a number of bytes and stores it in value pointer.</Abstract>
   </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>OutputStream</Name>
+      <APILanguage>c</APILanguage>
+      <Type>cl</Type>
+      <Scope>OutputStream</Scope>
+    </TokenIdentifier>
+    <Path>interface_output_stream.html</Path>
+    <Abstract>OutputStream - Class to write into a stream and save later as a file.</Abstract>
+    <DeclaredIn>OutputStream.h</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>writeChar:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instm</Type>
+      <Scope>OutputStream</Scope>
+    </TokenIdentifier>
+    <Path>interface_output_stream.html</Path>
+    <Anchor>ac9bcd6e27b1296221683cae3fb0ddb98</Anchor>
+    <Abstract>Write char value in stream.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>writeUnsignedChar:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instm</Type>
+      <Scope>OutputStream</Scope>
+    </TokenIdentifier>
+    <Path>interface_output_stream.html</Path>
+    <Anchor>acf1be84507500afe27e33ca6872afea8</Anchor>
+    <Abstract>Write unsigned char value in stream.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>writeShort:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instm</Type>
+      <Scope>OutputStream</Scope>
+    </TokenIdentifier>
+    <Path>interface_output_stream.html</Path>
+    <Anchor>afa15bc1e20814205c86f7f1c8e2ae6dc</Anchor>
+    <Abstract>Write short value in stream.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>writeUnsignedShort:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instm</Type>
+      <Scope>OutputStream</Scope>
+    </TokenIdentifier>
+    <Path>interface_output_stream.html</Path>
+    <Anchor>a983377296d3fb38f4721bbaf52d6bc5e</Anchor>
+    <Abstract>Write unsigned short value in stream.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>writeInt:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instm</Type>
+      <Scope>OutputStream</Scope>
+    </TokenIdentifier>
+    <Path>interface_output_stream.html</Path>
+    <Anchor>aaee67bee4dc642d89bd3c41723ac303a</Anchor>
+    <Abstract>Write int value in stream.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>writeUnsignedInt:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instm</Type>
+      <Scope>OutputStream</Scope>
+    </TokenIdentifier>
+    <Path>interface_output_stream.html</Path>
+    <Anchor>a8f31ac25b62790935a5f601bd0e36215</Anchor>
+    <Abstract>Write unsigned int value in stream.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>writeLong:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instm</Type>
+      <Scope>OutputStream</Scope>
+    </TokenIdentifier>
+    <Path>interface_output_stream.html</Path>
+    <Anchor>aced5b663a56bb3a220780f903a7bde3c</Anchor>
+    <Abstract>Write long value in stream.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>writeUnsignedLong:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instm</Type>
+      <Scope>OutputStream</Scope>
+    </TokenIdentifier>
+    <Path>interface_output_stream.html</Path>
+    <Anchor>a2d22fb9ba474ff42b3443696f5fa7187</Anchor>
+    <Abstract>Write unsigned long value in stream.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>writeFloat:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instm</Type>
+      <Scope>OutputStream</Scope>
+    </TokenIdentifier>
+    <Path>interface_output_stream.html</Path>
+    <Anchor>af9ddff8412a6dcaca582189bbf8dc89f</Anchor>
+    <Abstract>Write float value in stream.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>writeDouble:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instm</Type>
+      <Scope>OutputStream</Scope>
+    </TokenIdentifier>
+    <Path>interface_output_stream.html</Path>
+    <Anchor>afb3a6bf504de6812c5fd33e7d4e39e84</Anchor>
+    <Abstract>Write double long value in stream.</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>writeString:</Name>
+      <APILanguage>occ</APILanguage>
+      <Type>instm</Type>
+      <Scope>OutputStream</Scope>
+    </TokenIdentifier>
+    <Path>interface_output_stream.html</Path>
+    <Anchor>aea4f4ab2a92d3a55bdb968f952bebd0e</Anchor>
+    <Abstract>Write string value in stream.</Abstract>
+  </Token>
 </Tokens>

@@ -17,6 +17,10 @@
           <Name>InputStream</Name>
           <Path>interface_input_stream.html</Path>
          </Node>
+         <Node>
+          <Name>OutputStream</Name>
+          <Path>interface_output_stream.html</Path>
+         </Node>
         </Subnodes>
        </Node>
        <Node>
@@ -34,6 +38,10 @@
            <Node>
             <Name>InputStream</Name>
             <Path>interface_input_stream.html</Path>
+           </Node>
+           <Node>
+            <Name>OutputStream</Name>
+            <Path>interface_output_stream.html</Path>
            </Node>
           </Subnodes>
          </Node>
@@ -62,6 +70,14 @@
          <Node>
           <Name>/Users/vbergae/Documents/Cocoa/BinaryStream/InputStream.m</Name>
           <Path>_input_stream_8m.html</Path>
+         </Node>
+         <Node>
+          <Name>/Users/vbergae/Documents/Cocoa/BinaryStream/OutputStream.h</Name>
+          <Path>_output_stream_8h.html</Path>
+         </Node>
+         <Node>
+          <Name>/Users/vbergae/Documents/Cocoa/BinaryStream/OutputStream.m</Name>
+          <Path>_output_stream_8m.html</Path>
          </Node>
         </Subnodes>
        </Node>

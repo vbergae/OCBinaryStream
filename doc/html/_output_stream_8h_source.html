@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>OCBinaryStream: /Users/vbergae/Documents/Cocoa/BinaryStream/InputStream.h Source File</title>
+<title>OCBinaryStream: /Users/vbergae/Documents/Cocoa/BinaryStream/OutputStream.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
@@ -56,15 +56,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">/Users/vbergae/Documents/Cocoa/BinaryStream/InputStream.h</div>  </div>
+<div class="title">/Users/vbergae/Documents/Cocoa/BinaryStream/OutputStream.h</div>  </div>
 </div>
 <div class="contents">
-<a href="_input_stream_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//  This file is part of the BinaryStream package.</span>
+<a href="_output_stream_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//  This file is part of the BinaryStream package.</span>
 <a name="l00002"></a>00002 <span class="comment">//</span>
-<a name="l00003"></a>00003 <span class="comment">//  InputStream.h</span>
+<a name="l00003"></a>00003 <span class="comment">//  OutputStream.h</span>
 <a name="l00004"></a>00004 <span class="comment">//  BinaryStream</span>
 <a name="l00005"></a>00005 <span class="comment">//</span>
-<a name="l00006"></a>00006 <span class="comment">//  Created by Víctor on 12/07/11.</span>
+<a name="l00006"></a>00006 <span class="comment">//  Created by Víctor on 21/07/11.</span>
 <a name="l00007"></a>00007 <span class="comment">//  Copyright 2011 Víctor Berga &lt;victor@victorberga.com&gt;. All rights reserved.</span>
 <a name="l00008"></a>00008 <span class="comment">//</span>
 <a name="l00009"></a>00009 <span class="comment">//  For the full copyright and license information, please view the LICENSE</span>
@@ -73,40 +73,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00012"></a>00012 <span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#import &quot;<a class="code" href="_base_stream_8h.html">BaseStream.h</a>&quot;</span>
 <a name="l00014"></a>00014 
-<a name="l00020"></a><a class="code" href="interface_input_stream.html">00020</a> <span class="keyword">@interface </span><a class="code" href="interface_input_stream.html" title="Class to read a binary file.">InputStream</a> : <a class="code" href="interface_base_stream.html" title="BaseStream - Base class to read and write streams.">BaseStream</a>
+<a name="l00020"></a><a class="code" href="interface_output_stream.html">00020</a> <span class="keyword">@interface </span><a class="code" href="interface_output_stream.html" title="OutputStream - Class to write into a stream and save later as a file.">OutputStream</a> : <a class="code" href="interface_base_stream.html" title="BaseStream - Base class to read and write streams.">BaseStream</a>
 <a name="l00021"></a>00021 
 <a name="l00022"></a>00022 <span class="preprocessor">#pragma mark -</span>
 <a name="l00023"></a>00023 <span class="preprocessor"></span><span class="preprocessor">#pragma mark Instance Methods</span>
 <a name="l00024"></a>00024 <span class="preprocessor"></span>
-<a name="l00031"></a>00031 - (void)<a class="code" href="interface_input_stream.html#a7838cacc52ea816ced8e011a08a412e6" title="Open the stream in read mode.">openStream</a>;
-<a name="l00032"></a>00032 
-<a name="l00038"></a>00038 - (void)<a class="code" href="interface_input_stream.html#a90631cdfaca06e3677be9c1837b06cd4" title="Close the stream.">closeStream</a>;
-<a name="l00039"></a>00039 
-<a name="l00045"></a>00045 - (char)<a class="code" href="interface_input_stream.html#af087f116858c5e696eb1f61889a7ba18" title="Read next char in stream.">readChar</a>;
-<a name="l00046"></a>00046 
-<a name="l00052"></a>00052 - (<span class="keywordtype">unsigned</span> char)<a class="code" href="interface_input_stream.html#a494cd3c03f19670ea62d78430d0c047c" title="Read next unsigned char in stream.">readUnsignedChar</a>;
-<a name="l00053"></a>00053 
-<a name="l00059"></a>00059 - (short)<a class="code" href="interface_input_stream.html#ab8d9d53bb6019cafa31da51390917f36" title="Read next short in stream.">readShort</a>;
-<a name="l00060"></a>00060 
-<a name="l00066"></a>00066 - (<span class="keywordtype">unsigned</span> short)<a class="code" href="interface_input_stream.html#a2c9d688be6cc5ff38c0f66c06400105f" title="Read next unsigned short in stream.">readUnsignedShort</a>;
-<a name="l00067"></a>00067 
-<a name="l00073"></a>00073 - (int)<a class="code" href="interface_input_stream.html#ac4dc9964d286ddbbd2a108991190d39d" title="Read next int in stream.">readInt</a>;
-<a name="l00074"></a>00074 
-<a name="l00080"></a>00080 - (<span class="keywordtype">unsigned</span> int)<a class="code" href="interface_input_stream.html#a55b3de51bc5631fb67d6681f33e52228" title="Read next unsigned int in stream.">readUnsignedInt</a>;
-<a name="l00081"></a>00081 
-<a name="l00087"></a>00087 - (long)<a class="code" href="interface_input_stream.html#ab431b0689298bfb6b1e74cbe92c18e00" title="Read next long in stream.">readLong</a>;
-<a name="l00088"></a>00088 
-<a name="l00094"></a>00094 - (<span class="keywordtype">unsigned</span> long)<a class="code" href="interface_input_stream.html#a0fa7083c1f517543b5dfeeba132c7e6a" title="Read next unsigned long in stream.">readUnsignedLong</a>;
-<a name="l00095"></a>00095 
-<a name="l00101"></a>00101 - (float)<a class="code" href="interface_input_stream.html#aa5de12b8cd82d61b545a85ea991944a3" title="Read next float in stream.">readFloat</a>;
-<a name="l00102"></a>00102 
-<a name="l00108"></a>00108 - (double)<a class="code" href="interface_input_stream.html#a840ea5c01770156bd51bdb9f65f44e30" title="Read next double in stream.">readDouble</a>;
-<a name="l00109"></a>00109 
-<a name="l00115"></a>00115 - (NSString *)<a class="code" href="interface_input_stream.html#a2ec691edf6929ad9b29e1ce9ddd454eb" title="Reads a string with a len of the first unsigned byte.">readString</a>;
-<a name="l00116"></a>00116 
-<a name="l00123"></a>00123 - (NSString *)readStringOfLen:(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)len;
-<a name="l00124"></a>00124 
-<a name="l00125"></a>00125 <span class="keyword">@end</span>
+<a name="l00030"></a>00030 - (void)writeChar:(<span class="keywordtype">char</span>)value;
+<a name="l00031"></a>00031 
+<a name="l00037"></a>00037 - (void)writeUnsignedChar:(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)value;
+<a name="l00038"></a>00038 
+<a name="l00044"></a>00044 - (void)writeShort:(<span class="keywordtype">short</span>)value;
+<a name="l00045"></a>00045 
+<a name="l00051"></a>00051 - (void)writeUnsignedShort:(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>)value;
+<a name="l00052"></a>00052 
+<a name="l00058"></a>00058 - (void)writeInt:(<span class="keywordtype">int</span>)value;
+<a name="l00059"></a>00059 
+<a name="l00065"></a>00065 - (void)writeUnsignedInt:(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)value;
+<a name="l00066"></a>00066 
+<a name="l00072"></a>00072 - (void)writeLong:(<span class="keywordtype">long</span>)value;
+<a name="l00073"></a>00073 
+<a name="l00079"></a>00079 - (void)writeUnsignedLong:(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)value;
+<a name="l00080"></a>00080 
+<a name="l00086"></a>00086 - (void)writeFloat:(<span class="keywordtype">float</span>)value;
+<a name="l00087"></a>00087 
+<a name="l00093"></a>00093 - (void)writeDouble:(<span class="keywordtype">double</span>)value;
+<a name="l00094"></a>00094 
+<a name="l00100"></a>00100 - (void)writeString:(NSString *)value;
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102 <span class="keyword">@end</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->
