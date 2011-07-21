@@ -10,54 +10,14 @@
 //  file that was distributed with this source code.
 
 #import <Foundation/Foundation.h>
+#import "BaseStream.h"
 
 /**
  Class to read a binary file
  
  @author Víctor Berga <victor@victorberga.com>
  */
-@interface InputStream : NSObject {
-@private
-    NSString            *_path;
-    FILE                *_file;
-    char                *_buffer;
-    unsigned long       _currentOffset;
-    unsigned long       _fileLen;
-    NSStringEncoding    _stringEncoding;
-}
-
-/**
- Path to file 
- */
-@property (nonatomic, retain) NSString *path;
-/**
- Current offset
- */
-@property (nonatomic, readonly) unsigned long offset;
-/**
- File len
- */
-@property (nonatomic, readonly) unsigned long len;
-/**
- Return YES if the file is open and ready
- */
-@property (nonatomic, readonly) BOOL isOpen;
-/**
- Sets or gets the string enconding. Default is NSUTF8StringEncoding
- */
-@property (nonatomic, assign) NSStringEncoding stringEncoding;
-
-#pragma mark -
-#pragma mark Initializers
-
-/**
- Initialize a new InputStream object
- 
- @param NSString File path to read
- @return InputStream
- @access pubblic
- */
-- (id)initWithPath:(NSString *)path;
+@interface InputStream : BaseStream
 
 #pragma mark -
 #pragma mark Instance Methods

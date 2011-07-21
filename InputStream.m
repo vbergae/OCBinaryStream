@@ -38,64 +38,6 @@
 
 @implementation InputStream
 
-@synthesize path            = _path;
-@synthesize offset          = _currentOffset;
-@dynamic    len;
-@dynamic    isOpen;
-@synthesize stringEncoding  = _stringEncoding;
-
-#pragma mark -
-#pragma mark Initializers
-
-- (id)init
-{
-    self = [super init];
-    if (self)
-    {
-        _path           = nil;
-        _file           = NULL;
-        _buffer         = NULL;
-        _currentOffset  = 0;
-        _fileLen        = 0;
-        _stringEncoding = NSUTF8StringEncoding;
-    }
-    
-    return self;
-}
-
-- (id)initWithPath:(NSString *)path
-{
-    self = [self init];
-    if (self)
-    {
-        [self setPath:path];
-    }
-    
-    return self;
-}
-
-#pragma mark -
-#pragma mark Dynamic Properties
-
-- (unsigned long)len
-{
-    if (!_fileLen)
-    {
-        NSAssert(_file, @"ERROR_FILE_CLOSED");
-        
-        fseek(_file, 0, SEEK_END);
-        _fileLen = ftell(_file);
-        fseek(_file, 0, SEEK_SET);        
-    }
-
-    return _fileLen;
-}
-
-- (BOOL)isOpen
-{
-    return (_buffer) ? YES : NO;
-}
-
 #pragma mark -
 #pragma mark Instance Methods
 
@@ -237,29 +179,6 @@
     
     memcpy(value, &_buffer[_currentOffset], len);
     _currentOffset += len;
-}
-
-#pragma mark -
-#pragma mark Memory Management
-
-- (void)dealloc
-{
-    if ([self isOpen]) {
-        [self closeStream];
-    }
-    
-    [_path release];
-    _path = nil;
-    
-    [super dealloc];
-}
-
-#pragma mark -
-#pragma mark Debug methods
-
-- (NSString *)description
-{
-    return [NSString stringWithFormat:@"Path: %@; Current Offset: %lu; File len: %lu; Open: %b", self.path, self.offset, self.len,self.isOpen];
 }
 
 @end
