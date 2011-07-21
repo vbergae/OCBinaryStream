@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+  <TOC>
+    <Node>
+      <Name>Root</Name>
+      <Path>index.html</Path>
+      <Subnodes>
+       <Node>
+        <Name>Data Structures</Name>
+        <Path>annotated.html</Path>
+        <Subnodes>
+         <Node>
+          <Name>BaseStream</Name>
+          <Path>interface_base_stream.html</Path>
+         </Node>
+         <Node>
+          <Name>InputStream</Name>
+          <Path>interface_input_stream.html</Path>
+         </Node>
+        </Subnodes>
+       </Node>
+       <Node>
+        <Name>Data Structure Index</Name>
+        <Path>classes.html</Path>
+       </Node>
+       <Node>
+        <Name>Class Hierarchy</Name>
+        <Path>hierarchy.html</Path>
+        <Subnodes>
+         <Node>
+          <Name>BaseStream</Name>
+          <Path>interface_base_stream.html</Path>
+          <Subnodes>
+           <Node>
+            <Name>InputStream</Name>
+            <Path>interface_input_stream.html</Path>
+           </Node>
+          </Subnodes>
+         </Node>
+        </Subnodes>
+       </Node>
+       <Node>
+        <Name>Data Fields</Name>
+        <Path>functions.html</Path>
+       </Node>
+       <Node>
+        <Name>File List</Name>
+        <Path>files.html</Path>
+        <Subnodes>
+         <Node>
+          <Name>/Users/vbergae/Documents/Cocoa/BinaryStream/BaseStream.h</Name>
+          <Path>_base_stream_8h.html</Path>
+         </Node>
+         <Node>
+          <Name>/Users/vbergae/Documents/Cocoa/BinaryStream/BaseStream.m</Name>
+          <Path>_base_stream_8m.html</Path>
+         </Node>
+         <Node>
+          <Name>/Users/vbergae/Documents/Cocoa/BinaryStream/InputStream.h</Name>
+          <Path>_input_stream_8h.html</Path>
+         </Node>
+         <Node>
+          <Name>/Users/vbergae/Documents/Cocoa/BinaryStream/InputStream.m</Name>
+          <Path>_input_stream_8m.html</Path>
+         </Node>
+        </Subnodes>
+       </Node>
+      </Subnodes>
+    </Node>
+  </TOC>
+</DocSetNodes>

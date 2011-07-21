@@ -20,6 +20,10 @@
 		CCED35FD13CF73F40086AE0B /* InputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA0352113CCE7E500C1E14C /* InputStream.m */; };
 		CCED360713CF9CB30086AE0B /* BinaryStream-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = CCED360613CF9CB30086AE0B /* BinaryStream-Prefix.pch */; };
 		CCED360813CF9CCC0086AE0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA034E613CCE76600C1E14C /* Foundation.framework */; };
+		CCEFACF413D89F71007DA21E /* BaseStream.h in Headers */ = {isa = PBXBuildFile; fileRef = CCEFACF213D89F71007DA21E /* BaseStream.h */; };
+		CCEFACF513D89F71007DA21E /* BaseStream.h in Headers */ = {isa = PBXBuildFile; fileRef = CCEFACF213D89F71007DA21E /* BaseStream.h */; };
+		CCEFACF613D89F71007DA21E /* BaseStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEFACF313D89F71007DA21E /* BaseStream.m */; };
+		CCEFACF713D89F71007DA21E /* BaseStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEFACF313D89F71007DA21E /* BaseStream.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,8 @@
 		CCC6772613D2068700875A72 /* files */ = {isa = PBXFileReference; lastKnownFileType = folder; path = files; sourceTree = "<group>"; };
 		CCED358613CF6E060086AE0B /* libBinaryStremMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBinaryStremMobile.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCED360613CF9CB30086AE0B /* BinaryStream-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BinaryStream-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		CCEFACF213D89F71007DA21E /* BaseStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseStream.h; sourceTree = "<group>"; };
+		CCEFACF313D89F71007DA21E /* BaseStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseStream.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,8 @@
 			children = (
 				CCA0352013CCE7E500C1E14C /* InputStream.h */,
 				CCA0352113CCE7E500C1E14C /* InputStream.m */,
+				CCEFACF213D89F71007DA21E /* BaseStream.h */,
+				CCEFACF313D89F71007DA21E /* BaseStream.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -182,6 +190,7 @@
 			files = (
 				CC07990713CE378100C9081B /* InputStream.h in Headers */,
 				CCED360713CF9CB30086AE0B /* BinaryStream-Prefix.pch in Headers */,
+				CCEFACF413D89F71007DA21E /* BaseStream.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCED35FA13CF72150086AE0B /* InputStream.h in Headers */,
+				CCEFACF513D89F71007DA21E /* BaseStream.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCED35FD13CF73F40086AE0B /* InputStream.m in Sources */,
+				CCEFACF613D89F71007DA21E /* BaseStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCED35E213CF6F110086AE0B /* InputStream.m in Sources */,
+				CCEFACF713D89F71007DA21E /* BaseStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
