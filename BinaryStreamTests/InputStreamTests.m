@@ -11,6 +11,9 @@
 
 #import "InputStreamTests.h"
 
+#define AssertBufferOverflow()      STAssertThrows([_inputStream readLong], \
+                                    @"Buffer overflow exception don't throw");
+
 @implementation BinaryStreamTests
 
 - (void)setUp
@@ -154,6 +157,8 @@
     STAssertTrue([_inputStream offset] == 8, 
                  @"offset should be 1 but is %d", [_inputStream offset]);
     
+    AssertBufferOverflow();
+    
     [_inputStream closeStream];
 }
 
@@ -222,6 +227,8 @@
     STAssertTrue([_inputStream offset] == 8, 
                  @"offset should be 1 but is %d", [_inputStream offset]);
     
+    AssertBufferOverflow();
+    
     [_inputStream closeStream];    
 }
 
@@ -262,6 +269,8 @@
                  value);
     STAssertTrue([_inputStream offset] == 8, 
                  @"offset should be 4 but is %d", [_inputStream offset]);
+    
+    AssertBufferOverflow();
     
     [_inputStream closeStream];
 }
@@ -304,6 +313,8 @@
     STAssertTrue([_inputStream offset] == 8, 
                  @"offset should be 4 but is %d", [_inputStream offset]);
     
+    AssertBufferOverflow();
+    
     [_inputStream closeStream];
 }
 
@@ -345,6 +356,8 @@
     STAssertTrue([_inputStream offset] == 16, 
                  @"offset should be 16 but is %d", [_inputStream offset]);        
     
+    AssertBufferOverflow();
+    
     [_inputStream closeStream];
 }
 
@@ -385,6 +398,8 @@
                  value);
     STAssertTrue([_inputStream offset] == 16, 
                  @"offset should be 16 but is %d", [_inputStream offset]);  
+
+    AssertBufferOverflow();
     
     [_inputStream closeStream];
 }
@@ -447,6 +462,8 @@
     STAssertTrue([_inputStream offset] == 48, 
                  @"offset should be 48 but is %d", [_inputStream offset]);
     
+    AssertBufferOverflow();
+    
     [_inputStream closeStream];
 }
 
@@ -508,6 +525,8 @@
                  value);
     STAssertTrue([_inputStream offset] == 48, 
                  @"offset should be 48 but is %d", [_inputStream offset]);
+    
+    AssertBufferOverflow();
     
     [_inputStream closeStream];
 }
