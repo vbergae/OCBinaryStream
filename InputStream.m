@@ -25,14 +25,6 @@
 - (BOOL)checkSizeToRead:(unsigned long)size;
 
 /**
- Checks if is possible to read size from current offset
- 
- @oaram unsingned long Size to check
- @param BOOL Return YES if is safety read the size
- */
-- (BOOL)checkSizeToRead:(unsigned long)size;
-
-/**
  Read a number of bytes and stores it in value pointer
  
  @param unsigned long Number of bytes to read
