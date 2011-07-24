@@ -23,6 +23,21 @@
 #pragma mark Instance Methods
 
 /**
+ Open the stream in write mode
+ 
+ @exception NSException ERROR_OPENING_FILE
+ @exception NSException ERRROR_FILE_SIZE_ZERO
+ */
+- (void)openStream;
+
+/**
+ Close the stream
+ 
+ @throws Exception on error
+ */
+- (void)closeStream;
+
+/**
  Write char value in stream
  
  @param char Value to write
