@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC07990713CE378100C9081B /* InputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = CCA0352013CCE7E500C1E14C /* InputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC47D3AE13DC6241000AE50E /* OutputStreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC47D3AD13DC6241000AE50E /* OutputStreamTests.m */; };
 		CCC6771013D204CD00875A72 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC676F513D2045F00875A72 /* Cocoa.framework */; };
 		CCC6771613D204CD00875A72 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCC6771413D204CD00875A72 /* InfoPlist.strings */; };
 		CCC6772113D204E700875A72 /* InputStreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC6772013D204E700875A72 /* InputStreamTests.m */; };
@@ -43,6 +44,8 @@
 /* Begin PBXFileReference section */
 		CC0798DD13CE362F00C9081B /* BinaryStream.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = BinaryStream.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC2F341613D322D1008D4394 /* README.rst */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.rst; sourceTree = SOURCE_ROOT; };
+		CC47D3AC13DC6241000AE50E /* OutputStreamTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutputStreamTests.h; sourceTree = "<group>"; };
+		CC47D3AD13DC6241000AE50E /* OutputStreamTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutputStreamTests.m; sourceTree = "<group>"; };
 		CCA034E613CCE76600C1E14C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CCA0352013CCE7E500C1E14C /* InputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputStream.h; sourceTree = "<group>"; };
 		CCA0352113CCE7E500C1E14C /* InputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputStream.m; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 			children = (
 				CCC6771F13D204E700875A72 /* InputStreamTests.h */,
 				CCC6772013D204E700875A72 /* InputStreamTests.m */,
+				CC47D3AC13DC6241000AE50E /* OutputStreamTests.h */,
+				CC47D3AD13DC6241000AE50E /* OutputStreamTests.m */,
 				CCC6771213D204CD00875A72 /* Supporting Files */,
 			);
 			path = BinaryStreamTests;
@@ -338,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCC6772113D204E700875A72 /* InputStreamTests.m in Sources */,
+				CC47D3AE13DC6241000AE50E /* OutputStreamTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
