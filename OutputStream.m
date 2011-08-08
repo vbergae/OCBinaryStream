@@ -90,8 +90,16 @@
 
 - (void)writeString:(NSString *)value
 {
+    NSUInteger len = [value length];
     const char *cValue = [value cStringUsingEncoding:self.stringEncoding];
-    fwrite(cValue, sizeof(cValue), 1, _file);
+
+    if (len <= 0xFF) {
+        [self writeUnsignedChar:len];
+    } else {
+        [self writeUnsignedShort:len];
+    }
+    
+    fwrite(cValue, [value length], 1, _file);
 }
 
 @end
