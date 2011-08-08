@@ -69,6 +69,16 @@
 }
 
 #pragma mark -
+#pragma mark Memory Management
+
+- (void)dealloc
+{
+    [self setPath:nil];
+    
+    [super dealloc]; 
+}
+
+#pragma mark -
 #pragma mark Debug methods
 
 - (NSString *)description

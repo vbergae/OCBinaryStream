@@ -176,4 +176,16 @@
     _currentOffset += len;
 }
 
+#pragma mark -
+#pragma mark Memory Management
+
+- (void)dealloc
+{
+    if ([self isOpen]) {
+        [self closeStream];
+    }
+    
+    [super dealloc];
+}
+
 @end
