@@ -9,6 +9,7 @@
 #import "OutputStreamTests.h"
 
 #define setTestFile(file)     [_testPath stringByAppendingPathComponent:file]
+NSString * const kTestsDirectory = @"~/Library/OCBinaryStream_tests/";
 
 @implementation OutputStreamTests
 
@@ -16,7 +17,16 @@
 {
     [super setUp];
     
-    _testPath = @"/Users/vbergae/Desktop/tests";
+    NSError *error = nil;
+    [[NSFileManager defaultManager]
+     createDirectoryAtPath:kTestsDirectory
+     withIntermediateDirectories:YES
+     attributes:nil
+     error:&error];
+    
+    STAssertNil(error, error.localizedDescription);
+    
+    _testPath = kTestsDirectory;
     _outputStream = [[OutputStream alloc] init];
     STAssertNotNil(_outputStream, @"Failed instantiatin OutputStream");
 }
@@ -25,6 +35,13 @@
 {
     [_outputStream release];
     _outputStream = nil;
+    
+    NSError *error = nil;
+    [[NSFileManager defaultManager]
+     removeItemAtPath:kTestsDirectory
+     error:&error];
+    
+    STAssertNil(error, error.localizedDescription);
     
     [super tearDown];
 }
