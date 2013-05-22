@@ -8,8 +8,7 @@
 
 #import "OutputStreamTests.h"
 
-#define setTestFile(file)     [_testPath stringByAppendingPathComponent:file]
-NSString * const kTestsDirectory = @"~/Library/OCBinaryStream_tests/";
+static NSString * const kTestsDirectory = @"test_data";
 
 @implementation OutputStreamTests
 

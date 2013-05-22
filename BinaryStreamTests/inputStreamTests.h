@@ -15,6 +15,7 @@
 @interface BinaryStreamTests : SenTestCase {
 @private
     InputStream *_inputStream;
+    NSString *_testPath;
 }
 
 - (void)setTestPath:(NSString *)path;

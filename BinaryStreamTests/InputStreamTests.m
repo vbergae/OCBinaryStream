@@ -14,6 +14,8 @@
 #define AssertBufferOverflow()      STAssertThrows([_inputStream readLong], \
                                     @"Buffer overflow exception don't throw");
 
+static NSString * const kTestsDirectory = @"BinaryStreamTests/files";
+
 @implementation BinaryStreamTests
 
 - (void)setUp
@@ -21,6 +23,7 @@
     [super setUp];
     
     // Set-up code here.
+    _testPath = kTestsDirectory;
     _inputStream = [[InputStream alloc] init];
     STAssertNotNil(_inputStream, @"Failed instantiating InputStream");
 }
@@ -40,8 +43,8 @@
 
 - (void)testSetPath
 {
-    NSString *path = @"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test1.bin";
-    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test1.bin"];
+    NSString *path = setTestFile(@"test1.bin");
+    [self setTestPath:path];
     
     STAssertTrue([_inputStream.path isEqualToString:path], 
                  @"Path property broken");
@@ -69,7 +72,7 @@
 
 - (void)testOpenCloseStream
 {
-    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test1.bin"];
+    [self setTestPath:setTestFile(@"test1.bin")];
     
     // Opening file
     STAssertNoThrow([_inputStream openStream], @"openStrem fails");
@@ -94,7 +97,7 @@
 
 - (void)testReadChar
 {
-    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test1.bin"];
+    [self setTestPath:setTestFile(@"test1.bin")];
     [_inputStream openStream];
     
     // Tests first 8 bytes in test1.bin file 
@@ -164,7 +167,7 @@
 
 - (void)testReadUnsignedChar
 {
-    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test1.bin"];
+    [self setTestPath:setTestFile(@"test1.bin")];
     [_inputStream openStream];
     
     // Tests first 4 bytes in test1.bin file 
@@ -234,7 +237,7 @@
 
 - (void)testReadShort
 {
-    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test2.bin"];
+    [self setTestPath:setTestFile(@"test2.bin")];
     [_inputStream openStream];
     
     // Tests first 8 bytes in test2.bin file 
@@ -277,7 +280,7 @@
 
 - (void)testReadUnsignedShort
 {
-    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test2.bin"];
+    [self setTestPath:setTestFile(@"test2.bin")];
     [_inputStream openStream];
     
     // Tests first 8 bytes in test2.bin file 
@@ -320,7 +323,7 @@
 
 - (void)testReadInt
 {
-    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test3.bin"];
+    [self setTestPath:setTestFile(@"test3.bin")];
     [_inputStream openStream];
     
     // Tests first 16 bytes in test2.bin file 
@@ -363,7 +366,7 @@
 
 - (void)testReadUnsignedInt
 {
-    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test3.bin"];
+    [self setTestPath:setTestFile(@"test3.bin")];
     [_inputStream openStream];
     
     // Tests first 16 bytes in test3.bin file 
@@ -406,7 +409,7 @@
 
 - (void)testReadLong
 {
-    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test4.bin"];
+    [self setTestPath:setTestFile(@"test4.bin")];
     [_inputStream openStream];    
 
     // Tests first 16 bytes in test3.bin file 
@@ -469,7 +472,7 @@
 
 - (void)testReadUnsignedLong
 {
-    [self setTestPath:@"/Users/vbergae/Documents/Cocoa/BinaryStream/BinaryStreamTests/files/test4.bin"];
+    [self setTestPath:setTestFile(@"test4.bin")];
     [_inputStream openStream];    
     
     // Tests first 16 bytes in test3.bin file 

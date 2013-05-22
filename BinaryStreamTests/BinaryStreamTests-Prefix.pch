@@ -16,4 +16,6 @@
 
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
+
+    #define setTestFile(file)     [_testPath stringByAppendingPathComponent:file]
 #endif
